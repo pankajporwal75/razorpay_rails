@@ -66,3 +66,5 @@ group :test do
   gem "selenium-webdriver"
 end
 
+#Razorpay Integration
+gem 'razorpay'
