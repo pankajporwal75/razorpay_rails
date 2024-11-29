@@ -8,6 +8,9 @@ gem "rails", "~> 7.1.5"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
+# Jquery
+gem 'jquery-rails'
+
 # Use sqlite3 as the database for Active Record
 gem "pg"
 
@@ -58,6 +61,7 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem 'pry'
 end
 
 group :test do
@@ -66,3 +70,5 @@ group :test do
   gem "selenium-webdriver"
 end
 
+#Razorpay Integration
+gem 'razorpay'
