@@ -11,7 +11,14 @@ $(document).on('ready', function() {
         "image": "https://example.com/your_logo",
         "order_id": data.order_id,
         "handler": function (response){
-          alert('Payment Successful');
+          $.get({
+            url: '/orders/' + orderId + '/capture_payment',
+            data: {
+              payment_id: response.razorpay_payment_id,
+              order_id: response.razorpay_order_id,
+              signature: response.razorpay_signature
+            }
+          });
         }
       }
       var rzp1 = new Razorpay(options);
